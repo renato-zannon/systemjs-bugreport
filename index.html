@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script src="bower_components/traceur/traceur.js"></script>
+    <script src="bower_components/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="bower_components/system.js/dist/system.js"></script>
+
+    <script type="text/javascript">
+      window.define  = System.amdDefine;
+      window.require = window.requirejs = System.amdRequire;
+
+      // Uncomment the line below and the error vanishes
+      // System.import("app-es6").catch(console.error.bind(console));
+      System.import("app-instantiate").catch(console.error.bind(console));
+    </script>
+  </body>
+</html>
